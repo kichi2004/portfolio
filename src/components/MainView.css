@@ -1,0 +1,10 @@
+.main-view {
+    color: white;
+    width: 80%;
+    margin: auto;
+}
+
+.main-view__content {
+    width: 100%;
+    padding: 5rem 0;
+}
