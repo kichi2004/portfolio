@@ -1,30 +1,79 @@
 .main-view {
-    color: white;
-    width: 80%;
-    max-width: 1500px;
-    margin: auto;
+  color: white;
+  width: 80%;
+  max-width: 1500px;
+  margin: auto;
 
-    &__profile {
-        &__table {
-            &__row {
-                display: grid;
-                font-size: 2em;
-                grid-template-columns: 7em 1fr;
-                margin: 1.5rem 0;
+  &__profile {
+    &__table {
+      &__row {
+        display: grid;
+        font-size: 2em;
+        grid-template-columns: 7em 1fr;
+        margin: 1.5rem 0;
 
-                &__small {
-                    font-size: 0.8em;
-                    padding: 0 0.2em;
-                }
-            }
+        &__small {
+          font-size: 0.8em;
+          padding: 0 0.2em;
         }
+      }
+    }
+  }
+
+  &__skills {
+    &__contents {
+      display: flex;
+      justify-content: left;
+      flex-direction: column;
     }
 
-    &__skills {
-        &__contents {
-            display: flex;
-            justify-content: left;
-            flex-direction: column;
+    &__other-skill {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      &__box {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: #f3f0f0;
+        padding: 1.5rem 3rem;
+        margin: 1.5rem 0;
+        color: black;
+        border-radius: 2rem;
+
+        &__image {
+          max-height: 150px;
         }
+
+        &__text {
+          margin: 0 0.4em;
+          font-size: 3.6rem;
+        }
+      }
     }
+  }
+
+  &__contact {
+    &__mail, &__twitter {
+      display: inline-flex;
+      align-items: center;
+      background-color: #eeeeee;
+      padding: 1em;
+      border-radius: 10px;
+      text-decoration: none;
+      margin: 0 1rem;
+
+      &__icon {
+        margin: 0 1em;
+        width: 60px;
+      }
+
+      &__address {
+        color: #000000;
+        font-size: 1.7rem;
+        margin: 0 1em;
+      }
+    }
+  }
 }

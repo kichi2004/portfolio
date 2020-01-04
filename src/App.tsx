@@ -17,6 +17,11 @@ const App: React.FC = () => {
         <div className="triangle" />
       </div>
       <MainView />
+      <div className="footer">
+        (c) kichi2004 2020-2020
+        <br />
+        Last Update: 2020/01/05
+      </div>
     </div>
   )
 }

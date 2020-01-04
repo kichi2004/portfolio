@@ -7,6 +7,16 @@ interface SkillBoxProps extends SkillType {}
 export default class SkillBox extends React.Component<SkillBoxProps> {
   render() {
     const langImage: any = require(`../assets/langs/${this.props.directory}/index.png`)
+    const frameworks = (this.props.frameworks || []).map(x => (
+      <div className="skill-box__frameworks__box" key={x.name}>
+        <img
+          className="skill-box__frameworks__box__image"
+          alt={x.name}
+          src={require(`../assets/langs/${this.props.directory}/${x.imagePath}`)}
+        />
+        <div className="skill-box__frameworks__box__text">{x.name}</div>
+      </div>
+    ))
     return (
       <div className="skill-box">
         <img
@@ -14,9 +24,17 @@ export default class SkillBox extends React.Component<SkillBoxProps> {
           src={langImage}
           alt={this.props.name}
         />
-        <div className="skill-box__lang-name">{this.props.name}</div>
+        <div
+          className="skill-box__lang-name"
+          style={{
+            fontSize: this.props.fontSize || '3.6rem'
+          }}
+        >
+          {this.props.name}
+        </div>
         <div className="skill-box__since">{this.props.since}</div>
         <div className="skill-box__comment">{this.props.comment}</div>
+        <div className="skill-box__frameworks">{frameworks}</div>
       </div>
     )
   }

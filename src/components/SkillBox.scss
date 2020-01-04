@@ -1,16 +1,14 @@
 .skill-box {
   display: grid;
   align-items: center;
-  background-color: #f5f5e6;
-  padding: 1rem;
+  background-color: #f3f0f0;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
   color: black;
   border-radius: 2rem;
-  grid-template-rows: 4rem 4rem 2rem;
-  grid-template-areas:
-    "lang-image lang-name comment   "
-    "lang-image lang-name frameworks"
-    "lang-image since     frameworks";
-  grid-template-columns: 170px 140px 1fr;
+  grid-template-rows: 6rem 1rem 2rem;
+  grid-template-columns: 150px 14rem 1fr;
+  grid-template-areas: "lang-image lang-name comment   " "lang-image lang-name frameworks" "lang-image since     frameworks";
 
   &__lang-image {
     grid-area: lang-image;
@@ -19,7 +17,6 @@
 
   &__lang-name {
     grid-area: lang-name;
-    font-size: 4rem;
     text-align: center;
   }
 
@@ -30,10 +27,33 @@
   }
 
   &__comment {
+    font-size: 1.2em;
     grid-area: comment;
   }
 
   &__frameworks {
-    grid-area: comment;
+    grid-area: frameworks;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &__box {
+      display: flex;
+      flex-direction: row;
+      padding: 0.3em 1em;
+      margin: 0.3em 0.4em;
+      text-align: center;
+      align-items: center;
+      border: 1px solid #888888;
+      border-radius: 25px;
+      background-color: #fff5f0;
+      font-size: 1.3rem;
+      &__image {
+        height: 1.6em;
+      }
+      &__text {
+        margin-left: 0.6em;
+      }
+    }
   }
 }
