@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+
+.main-view-content {
+    width: 100%;
+    padding: 5rem 0;
+
+    &__title {
+        font-size: 4em;
+        font-family: 'Anton', sans-serif;
+        margin-bottom: 1rem;
+    }
+
+    &__content {
+        padding-left: 3em;
+    }
+}

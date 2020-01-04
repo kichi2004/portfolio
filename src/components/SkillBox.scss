@@ -1,0 +1,39 @@
+.skill-box {
+  display: grid;
+  align-items: center;
+  background-color: #f5f5e6;
+  padding: 1rem;
+  color: black;
+  border-radius: 2rem;
+  grid-template-rows: 4rem 4rem 2rem;
+  grid-template-areas:
+    "lang-image lang-name comment   "
+    "lang-image lang-name frameworks"
+    "lang-image since     frameworks";
+  grid-template-columns: 170px 140px 1fr;
+
+  &__lang-image {
+    grid-area: lang-image;
+    width: 150px;
+  }
+
+  &__lang-name {
+    grid-area: lang-name;
+    font-size: 4rem;
+    text-align: center;
+  }
+
+  &__since {
+    grid-area: since;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  &__comment {
+    grid-area: comment;
+  }
+
+  &__frameworks {
+    grid-area: comment;
+  }
+}

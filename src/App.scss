@@ -1,0 +1,44 @@
+.wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: #15151C;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  background-color: #25252C;
+  color: #DDDDD7;
+
+  &__elements {
+    display: flex;
+    flex-direction: row;
+    &__icon {
+      width: 170px;
+      height: 170px;
+      border-radius: 100%;
+    }
+
+    &__name {
+      @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+      font-family: 'Source Sans Pro', sans-serif;
+      margin-left: 1em;
+      line-height: 170px;
+      font-size: 4rem;
+    }
+  }
+}
+
+.triangle {
+  $border_style: 3px #DDDDD7 solid;
+  margin-top: 10rem;
+  height: 70px;
+  width: 70px;
+  border-bottom: $border_style;
+  border-right: $border_style;
+  transform: rotate(45deg);
+}

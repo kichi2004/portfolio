@@ -1,0 +1,30 @@
+.main-view {
+    color: white;
+    width: 80%;
+    max-width: 1500px;
+    margin: auto;
+
+    &__profile {
+        &__table {
+            &__row {
+                display: grid;
+                font-size: 2em;
+                grid-template-columns: 7em 1fr;
+                margin: 1.5rem 0;
+
+                &__small {
+                    font-size: 0.8em;
+                    padding: 0 0.2em;
+                }
+            }
+        }
+    }
+
+    &__skills {
+        &__contents {
+            display: flex;
+            justify-content: left;
+            flex-direction: column;
+        }
+    }
+}
