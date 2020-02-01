@@ -11,8 +11,8 @@ const calcYear = (from: Date) =>
     (new Date().getTime() - from.getTime()) / (1000 * 60 * 60 * 24 * 365)
   )
 
-const calcAge = () => calcYear(new Date(2004, 1, 28))
-const calcGrade = () => calcYear(new Date(2009, 4, 1))
+const calcAge = () => calcYear(new Date(2004, 0, 28))
+const calcGrade = () => calcYear(new Date(2009, 3, 1))
 
 export const ProfileItems: ProfileType[] = [
   {
@@ -49,7 +49,9 @@ export const ProfileItems: ProfileType[] = [
       <div>
         diffeasy Inc.
         <br />
-        working as a programmer
+        <span className="main-view__profile__table__row__small">
+          Programmer / Frontend & Backend Engineer (Long-term Internship)
+        </span>
       </div>
     )
   },
