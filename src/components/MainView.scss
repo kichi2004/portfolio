@@ -1,7 +1,8 @@
 .main-view {
   color: white;
-  width: 80%;
+  width: 90%;
   max-width: 1500px;
+  min-width: 300px;
   margin: auto;
 
   &__profile {
@@ -15,6 +16,14 @@
         &__small {
           font-size: 0.8em;
           padding: 0 0.2em;
+        }
+
+        @media screen and (max-width: 768px) {
+          display: block;
+
+          &>div:not(&__title) {
+            padding-left: 1em;
+          }
         }
       }
     }
@@ -31,16 +40,19 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      flex-wrap: wrap;
 
       &__box {
         display: flex;
         flex-direction: row;
         align-items: center;
+        align-content: center;
         background-color: #f3f0f0;
         padding: 1.5rem 3rem;
         margin: 1.5rem 0;
         color: black;
         border-radius: 2rem;
+        flex-wrap: wrap;
 
         &__image {
           max-height: 150px;
@@ -62,7 +74,9 @@
       padding: 1em;
       border-radius: 10px;
       text-decoration: none;
-      margin: 0 1rem;
+      margin: 0.5rem 1rem;
+      flex-wrap: wrap;
+      border-bottom: solid 4px #666666;
 
       &__icon {
         margin: 0 1em;
@@ -73,6 +87,13 @@
         color: #000000;
         font-size: 1.7rem;
         margin: 0 1em;
+      }
+
+      &:active {
+        -webkit-transform: translateY(4px);
+        transform: translateY(4px);
+        border-bottom: none;
+        border-top: solid 4px transparent;
       }
     }
   }

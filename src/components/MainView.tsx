@@ -8,7 +8,7 @@ export default class MainView extends React.Component {
   render() {
     const profile = ProfileItems.map(x => (
       <div className="main-view__profile__table__row" key={x.key}>
-        <div>{x.title}</div>
+        <div className="main-view__profile__table__row__title">{x.title}</div>
         {x.content}
       </div>
     ))
@@ -49,6 +49,7 @@ export default class MainView extends React.Component {
         <div className="main-view__skills">
           <MainViewContent name={'Skills'}>
             <div className="main-view__skills__contents">{skills}</div>
+
             <div className="main-view__skills__other-skill">{otherSkills}</div>
           </MainViewContent>
         </div>

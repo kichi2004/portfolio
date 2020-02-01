@@ -2,33 +2,64 @@
   display: grid;
   align-items: center;
   background-color: #f3f0f0;
-  padding: 1.5rem;
+  padding: 1rem 1.5rem;
   margin: 1.5rem 0;
   color: black;
   border-radius: 2rem;
-  grid-template-rows: 6rem 1rem 2rem;
+  grid-template-rows: min-content auto 2rem;
   grid-template-columns: 150px 14rem 1fr;
   grid-template-areas: "lang-image lang-name comment   " "lang-image lang-name frameworks" "lang-image since     frameworks";
+  @media screen and (max-width: 768px) {
+    grid-template-rows: 1fr 2rem auto min-content;
+    grid-template-columns: 150px 1fr;
+    grid-template-areas:
+            "lang-image lang-name"
+            "lang-image since"
+            "comment    comment"
+            "frameworks frameworks";
+  }
+
+  @media screen and (max-width: 512px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto 0 auto;
+    grid-template-areas: "lang-image" "lang-name" "since" "comment" "frameworks";
+  }
 
   &__lang-image {
     grid-area: lang-image;
     width: 150px;
+
+    @media screen and (max-width: 512px) {
+      margin: 0 auto;
+    }
   }
 
   &__lang-name {
     grid-area: lang-name;
     text-align: center;
+    @media screen and (max-width: 768px) and (min-width: 512px) {
+      max-width: 14rem;
+    }
   }
 
   &__since {
     grid-area: since;
     font-size: 1.5rem;
     text-align: center;
+    @media screen and (max-width: 768px) and (min-width: 512px) {
+      max-width: 14rem;
+    }
   }
 
   &__comment {
     font-size: 1.2em;
     grid-area: comment;
+    @media screen and (max-width: 768px) {
+      padding: 1em 0;
+    }
+    @media screen and (max-width: 512px) {
+      display: none;
+    }
   }
 
   &__frameworks {
@@ -48,9 +79,11 @@
       border-radius: 25px;
       background-color: #fff5f0;
       font-size: 1.3rem;
+
       &__image {
         height: 1.6em;
       }
+
       &__text {
         margin-left: 0.6em;
       }
