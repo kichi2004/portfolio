@@ -179,7 +179,7 @@ export const SkillItems: SkillType[] = [
     name: 'AtCoder',
     directory: 'atcoder',
     since: '2018/02～',
-    comment: '競技プログラミング。実質本業で，2020年1月時点で水色です。',
+    comment: '競技プログラミング。AtCoder 水色程度の実力があります。',
     fontSize: '2.8rem',
     frameworks: [
       {
