@@ -6,13 +6,13 @@ const App: React.FC = () => {
   return (
     <div className="wrapper">
       <div className="top">
-        <div className="top__elements">
+        <div className="elements">
           <img
-            className="top__elements__icon"
+            className="elements__icon"
             src={require('./assets/icon.png')}
             alt="ICON"
           />
-          <span className="top__elements__name">kichi2004</span>
+          <span className="elements__name">kichi2004</span>
         </div>
         <div className="top__sp">
           このサイトは、 PC での閲覧を推奨しています。

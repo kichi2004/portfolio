@@ -19,29 +19,28 @@
       display: none;
     }
   }
-
-  &__elements {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    &__icon {
-      width: 170px;
-      height: 170px;
-      border-radius: 100%;
-    }
-
-    &__name {
-      @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
-      font-family: 'Source Sans Pro', sans-serif;
-      margin: 0 1em;
-      line-height: 170px;
-      font-size: 4rem;
-    }
-  }
 }
 
+.elements {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &__icon {
+    width: 170px;
+    height: 170px;
+    border-radius: 100%;
+  }
+
+  &__name {
+    @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0 1em;
+    line-height: 170px;
+    font-size: 4rem;
+  }
+}
 
 .footer {
   background-color: #25252C;

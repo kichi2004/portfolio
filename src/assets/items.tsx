@@ -12,7 +12,13 @@ const calcYear = (from: Date) =>
   )
 
 const calcAge = () => calcYear(new Date(2004, 0, 28))
-const calcGrade = () => calcYear(new Date(2009, 3, 1))
+const calcGrade = () => {
+  const year = calcYear(new Date(2019, 3, 1)) + 1
+  if (year % 10 === 1 && year % 100 !== 11) return `${year}st`
+  if (year % 10 === 2 && year % 100 !== 12) return `${year}nd`
+  if (year % 10 === 3 && year % 100 !== 13) return `${year}rd`
+  return `${year}th`
+}
 
 export const ProfileItems: ProfileType[] = [
   {
@@ -36,9 +42,7 @@ export const ProfileItems: ProfileType[] = [
     content: (
       <div>
         Tsukuba Kaisei Fukuoka High School
-        <span className="main-view__profile__table__row__small">
-          ({calcGrade()}th grade)
-        </span>
+        <span className="small">({calcGrade()} grade)</span>
       </div>
     )
   },
@@ -49,7 +53,7 @@ export const ProfileItems: ProfileType[] = [
       <div>
         diffeasy Inc.
         <br />
-        <span className="main-view__profile__table__row__small">
+        <span className="small">
           Programmer / Frontend & Backend Engineer (Long-term Internship)
         </span>
       </div>

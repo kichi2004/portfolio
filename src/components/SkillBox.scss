@@ -62,13 +62,13 @@
     }
   }
 
-  &__frameworks {
+  .framework-list {
     grid-area: frameworks;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 
-    &__box {
+    .framework-item {
       display: flex;
       flex-direction: row;
       padding: 0.3em 1em;
