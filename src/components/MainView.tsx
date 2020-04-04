@@ -21,6 +21,7 @@ export default class MainView extends React.Component {
 
     const skills = SkillItems.map(x => (
       <SkillBox
+        key={x.name}
         name={x.name}
         directory={x.directory}
         frameworks={x.frameworks}
@@ -41,8 +42,9 @@ export default class MainView extends React.Component {
       </div>
     ))
 
-    const devises = Devices.map(x => <Devise name={x.name} spec={x.spec} />)
-
+    const devises = Devices.map(x => (
+      <Devise key={x.name} name={x.name} spec={x.spec} />
+    ))
     return (
       <div className="main-view">
         <div className="profile">

@@ -22,7 +22,7 @@
     @media screen and (max-width: 768px) {
       display: block;
 
-      & > div:not(&__title) {
+      & > div:not(.row__title) {
         padding-left: 1em;
       }
     }
