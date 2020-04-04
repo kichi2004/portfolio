@@ -64,6 +64,13 @@
   }
 }
 
+.devices {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: -0.5em;
+}
+
 .contact-mail,
 .contact-twitter {
   display: inline-flex;

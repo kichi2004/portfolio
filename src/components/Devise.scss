@@ -1,0 +1,23 @@
+.device {
+  width: max-content;
+  margin: 1em;
+  padding: 1.5em 2em 1.5em 1.5em;
+  border-radius: 12px;
+  color: black;
+  background: #f3f0f0;
+  &__name {
+    font-size: 2.4rem;
+    font-weight: bold;
+  }
+
+  &-row {
+    display: flex;
+    padding: 0.5em 0 0 0.5em;
+    font-size: 1.8em;
+
+    &__title {
+      width: 3em;
+      padding: 0 0.3em;
+    }
+  }
+}

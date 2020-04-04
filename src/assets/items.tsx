@@ -215,3 +215,30 @@ export const OtherSkillItems: {
     imagePath: 'kotlin.png'
   }
 ]
+
+export type DeviceType = {
+  name: string
+  spec: { [key: string]: string | JSX.Element }
+}
+
+export const Devices: DeviceType[] = [
+  {
+    name: 'MacBook Air 2020',
+    spec: {
+      CPU: 'Intel Core i7-1060NG7',
+      RAM: '16GB',
+      SSD: '256GB',
+      GPU: 'Intel Iris Plus Graphics'
+    }
+  },
+  {
+    name: 'Desktop PC',
+    spec: {
+      CPU: 'Intel Core i5-6400T',
+      RAM: '12GB',
+      SSD: '500GB',
+      HDD: '2TB',
+      GPU: 'GeForce GT 1030'
+    }
+  }
+]

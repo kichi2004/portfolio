@@ -1,8 +1,14 @@
 import React from 'react'
 import './MainView.scss'
 import MainViewContent from './MainViewContent'
-import { OtherSkillItems, ProfileItems, SkillItems } from '../assets/items'
+import {
+  Devices,
+  OtherSkillItems,
+  ProfileItems,
+  SkillItems
+} from '../assets/items'
 import SkillBox from './SkillBox'
+import Devise from './Devise'
 
 export default class MainView extends React.Component {
   render() {
@@ -14,16 +20,14 @@ export default class MainView extends React.Component {
     ))
 
     const skills = SkillItems.map(x => (
-      <div key={x.name}>
-        <SkillBox
-          name={x.name}
-          directory={x.directory}
-          frameworks={x.frameworks}
-          comment={x.comment}
-          since={x.since}
-          fontSize={x.fontSize}
-        />
-      </div>
+      <SkillBox
+        name={x.name}
+        directory={x.directory}
+        frameworks={x.frameworks}
+        comment={x.comment}
+        since={x.since}
+        fontSize={x.fontSize}
+      />
     ))
 
     const otherSkills = OtherSkillItems.map(x => (
@@ -37,6 +41,8 @@ export default class MainView extends React.Component {
       </div>
     ))
 
+    const devises = Devices.map(x => <Devise name={x.name} spec={x.spec} />)
+
     return (
       <div className="main-view">
         <div className="profile">
@@ -47,6 +53,11 @@ export default class MainView extends React.Component {
             <div className="skill-contents">{skills}</div>
 
             <div className="other-skills">{otherSkills}</div>
+          </MainViewContent>
+        </div>
+        <div>
+          <MainViewContent name="PCs">
+            <div className="devices">{devises} </div>
           </MainViewContent>
         </div>
         <div>
