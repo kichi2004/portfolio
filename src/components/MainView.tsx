@@ -12,14 +12,14 @@ import Devise from './Devise'
 
 export default class MainView extends React.Component {
   render() {
-    const profile = ProfileItems.map(x => (
+    const profile = ProfileItems.map((x) => (
       <div className="row" key={x.key}>
         <div className="row__title">{x.title}</div>
         {x.content}
       </div>
     ))
 
-    const skills = SkillItems.map(x => (
+    const skills = SkillItems.map((x) => (
       <SkillBox
         key={x.name}
         name={x.name}
@@ -31,7 +31,7 @@ export default class MainView extends React.Component {
       />
     ))
 
-    const otherSkills = OtherSkillItems.map(x => (
+    const otherSkills = OtherSkillItems.map((x) => (
       <div className="other-skill" key={x.name}>
         <img
           className="other-skill__image"
@@ -42,7 +42,7 @@ export default class MainView extends React.Component {
       </div>
     ))
 
-    const devises = Devices.map(x => (
+    const devises = Devices.map((x) => (
       <Devise key={x.name} name={x.name} spec={x.spec} />
     ))
     return (
