@@ -51,11 +51,9 @@ export const ProfileItems: ProfileType[] = [
     title: 'Work',
     content: (
       <div>
-        diffeasy Inc.
+        JX PRESS Corporation / JX通信社
         <br />
-        <span className="small">
-          Programmer / Frontend & Backend Engineer (Long-term Internship)
-        </span>
+        <span className="small">Development Assistant</span>
       </div>
     )
   },
@@ -102,7 +100,7 @@ export const SkillItems: SkillType[] = [
     name: 'Ruby',
     directory: 'ruby',
     since: '2019/05～',
-    comment: '主に業務でのバックエンド開発に利用しています。',
+    comment: 'バックエンド API 開発に利用しています。',
     frameworks: [
       {
         name: 'Ruby on Rails',
@@ -160,7 +158,7 @@ export const SkillItems: SkillType[] = [
     name: 'Vue.js',
     directory: 'vue',
     since: '2019/01～',
-    comment: '業務を含むフロントエンド開発に利用しています。',
+    comment: 'フロントエンドアプリ開発に利用しています。',
     frameworks: [
       {
         name: 'NuxtJS',
@@ -215,6 +213,22 @@ export const OtherSkillItems: {
     imagePath: 'kotlin.png'
   }
 ]
+
+export type ExperienceType = {
+  fromDate?: string
+  toDate?: string
+  text: string
+}
+
+/*
+export const Experiences: ExperienceType[] = [
+  {
+    fromDate: '2019/05',
+    toDate: '2020/06',
+    text: '(株) diffeasy にてインターンシップ'
+  }
+]
+*/
 
 export type DeviceType = {
   name: string
