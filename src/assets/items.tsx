@@ -75,7 +75,7 @@ export type SkillType = {
 
 type Framework = {
   name: string
-  imagePath: string
+  imagePath?: string
 }
 
 export const SkillItems: SkillType[] = [
@@ -87,12 +87,10 @@ export const SkillItems: SkillType[] = [
       '競技プログラミングや，Windows Forms アプリ / Twitter BOT 開発，業務でのバッチ作成など，幅広い分野で利用しています。',
     frameworks: [
       {
-        name: '.NET Core',
-        imagePath: 'dotnet_core.png'
+        name: '.NET / .NET Core'
       },
       {
-        name: '.NET Framework',
-        imagePath: 'dotnet_framework.png'
+        name: '.NET Framework'
       }
     ]
   },
@@ -158,7 +156,7 @@ export const SkillItems: SkillType[] = [
     name: 'Vue.js',
     directory: 'vue',
     since: '2019/01～',
-    comment: 'フロントエンドアプリ開発に利用しています。',
+    comment: 'フロントエンドアプリ開発に利用しています．実務経験約 1 年半',
     frameworks: [
       {
         name: 'NuxtJS',
@@ -175,19 +173,24 @@ export const SkillItems: SkillType[] = [
     directory: 'react',
     since: '2020/01～',
     fontSize: '3rem',
-    comment: 'このサイト (ポートフォリオ) 作成に初めて利用しました。'
+    comment: 'フロントエンドアプリ開発に利用しています．実務経験あり'
+  },
+  {
+    name: 'Python',
+    directory: 'python',
+    since: '2017/10 以前',
+    fontSize: '3.2rem',
+    comment:
+      '業務でのアプリ開発や競技プログラミング，スクリプト作成等に利用しています．実務経験あり'
   },
   {
     name: 'AtCoder',
     directory: 'atcoder',
     since: '2018/02～',
-    comment: '競技プログラミング。AtCoder 水色程度の実力があります。',
+    comment:
+      '競技プログラミングです．AtCoder 1 級（青: A ランク）で，PAST 上級です．',
     fontSize: '2.8rem',
     frameworks: [
-      {
-        name: 'Python',
-        imagePath: 'python.png'
-      },
       {
         name: 'C++',
         imagePath: 'cpp.png'
@@ -200,18 +203,18 @@ export const OtherSkillItems: {
   name: string
   imagePath: string
 }[] = [
-  {
-    name: 'PHP',
-    imagePath: 'php.png'
-  },
-  {
-    name: 'Java',
-    imagePath: 'java.png'
-  },
-  {
-    name: 'Kotlin',
-    imagePath: 'kotlin.png'
-  }
+  // {
+  //   name: 'PHP',
+  //   imagePath: 'php.png'
+  // },
+  // {
+  //   name: 'Java',
+  //   imagePath: 'java.png'
+  // },
+  // {
+  //   name: 'Kotlin',
+  //   imagePath: 'kotlin.png'
+  // }
 ]
 
 export type ExperienceType = {

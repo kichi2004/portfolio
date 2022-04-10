@@ -7,14 +7,16 @@ interface SkillBoxProps extends SkillType {}
 export default class SkillBox extends React.Component<SkillBoxProps> {
   render() {
     const langImage: any = require(`../assets/langs/${this.props.directory}/index.png`)
-    const frameworks = (this.props.frameworks || []).map(x => (
-      <div className="framework-item" key={x.name}>
-        <img
-          className="framework-item__image"
-          alt={x.name}
-          src={require(`../assets/langs/${this.props.directory}/${x.imagePath}`)}
-        />
-        <div className="framework-item__text">{x.name}</div>
+    const frameworks = (this.props.frameworks || []).map((framework) => (
+      <div className="framework-item" key={framework.name}>
+        {framework.imagePath && (
+          <img
+            className="framework-item__image"
+            alt={framework.name}
+            src={require(`../assets/langs/${this.props.directory}/${framework.imagePath}`)}
+          />
+        )}
+        <div className="framework-item__text">{framework.name}</div>
       </div>
     ))
     return (
