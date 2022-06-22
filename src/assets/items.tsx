@@ -12,13 +12,6 @@ const calcYear = (from: Date) =>
   )
 
 const calcAge = () => calcYear(new Date(2004, 0, 28))
-const calcGrade = () => {
-  const year = calcYear(new Date(2019, 3, 1)) + 1
-  if (year % 10 === 1 && year % 100 !== 11) return `${year}st`
-  if (year % 10 === 2 && year % 100 !== 12) return `${year}nd`
-  if (year % 10 === 3 && year % 100 !== 13) return `${year}rd`
-  return `${year}th`
-}
 
 export const ProfileItems: ProfileType[] = [
   {
@@ -41,8 +34,9 @@ export const ProfileItems: ProfileType[] = [
     title: 'School',
     content: (
       <div>
-        Tsukuba Kaisei Fukuoka High School
-        <span className="small">({calcGrade()} grade)</span>
+        University of Tsukuba,
+        <br />
+        College of Information Science
       </div>
     )
   },
@@ -53,14 +47,19 @@ export const ProfileItems: ProfileType[] = [
       <div>
         JX PRESS Corporation / JX通信社
         <br />
-        <span className="small">Development Assistant</span>
+        <span className="small">Development Partner</span>
       </div>
     )
   },
   {
     key: 'lives',
-    title: 'From & Lives',
-    content: <div>Fukuoka City, Fukuoka Prefecture</div>
+    title: 'Live in',
+    content: <div>Tsukuba City, Ibaraki</div>
+  },
+  {
+    key: 'from',
+    title: 'From',
+    content: <div>Fukuoka City, Fukuoka</div>
   }
 ]
 
@@ -98,7 +97,7 @@ export const SkillItems: SkillType[] = [
     name: 'Ruby',
     directory: 'ruby',
     since: '2019/05～',
-    comment: 'バックエンド API 開発に利用しています。',
+    comment: 'バックエンド API 開発での利用経験があります。',
     frameworks: [
       {
         name: 'Ruby on Rails',
@@ -240,22 +239,30 @@ export type DeviceType = {
 
 export const Devices: DeviceType[] = [
   {
+    name: 'Desktop PC',
+    spec: {
+      CPU: 'Intel Core i7-12700',
+      RAM: '48GB',
+      SSD: 'M.2 1TB + SATA 1TB',
+      GPU: 'GeForce RTX 3060 Ti'
+    }
+  },
+  {
+    name: 'Prestige 14',
+    spec: {
+      CPU: 'Intel Core i7-1195G7',
+      RAM: '32GB',
+      SSD: '1TB',
+      GPU: 'GeForce GTX 1650 Ti Max-Q'
+    }
+  },
+  {
     name: 'MacBook Air 2020',
     spec: {
       CPU: 'Intel Core i7-1060NG7',
       RAM: '16GB',
       SSD: '256GB',
       GPU: 'Intel Iris Plus Graphics'
-    }
-  },
-  {
-    name: 'Desktop PC',
-    spec: {
-      CPU: 'Intel Core i5-6400T',
-      RAM: '12GB',
-      SSD: '500GB',
-      HDD: '2TB',
-      GPU: 'GeForce GT 1030'
     }
   }
 ]

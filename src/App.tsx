@@ -22,9 +22,9 @@ const App: React.FC = () => {
       </div>
       <MainView />
       <div className="footer">
-        (c) kichi2004 2020-2020
+        (c) kichi2004 2022
         <br />
-        Last Update: 2020/04/04
+        Last Update: 2022/06/23
       </div>
     </div>
   )
