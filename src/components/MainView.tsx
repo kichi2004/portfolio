@@ -3,19 +3,24 @@ import './MainView.scss'
 import MainViewContent from './MainViewContent'
 import {
   Devices,
+  Experiences,
+  Life,
   OtherSkillItems,
   ProfileItems,
   SkillItems
 } from '../assets/items'
 import SkillBox from './SkillBox'
-import Devise from './Devise'
+import Device from './Device'
 
 export default class MainView extends React.Component {
   render() {
     const profile = ProfileItems.map((x) => (
       <div className="row" key={x.key}>
         <div className="row__title">{x.title}</div>
-        {x.content}
+        <div>
+          {x.content}
+          {x.contentJa ? <div className="row__en">{x.contentJa}</div> : <></>}
+        </div>
       </div>
     ))
 
@@ -42,35 +47,51 @@ export default class MainView extends React.Component {
       </div>
     ))
 
-    const devises = Devices.map((x) => (
-      <Devise key={x.name} name={x.name} spec={x.spec} />
+    const devices = Devices.map((x) => (
+      <Device key={x.name} name={x.name} spec={x.spec} />
     ))
     return (
       <div className="main-view">
-        <div className="profile">
+        <section className="profile">
           <MainViewContent name={'Profile'}>{profile}</MainViewContent>
-        </div>
-        <div className="skills">
+        </section>
+        <section className="skills">
           <MainViewContent name={'Skills'}>
             <div className="skill-contents">{skills}</div>
 
             <div className="other-skills">{otherSkills}</div>
           </MainViewContent>
-        </div>
-        <div>
-          <MainViewContent name="PCs">
-            <div className="devices">{devises} </div>
+        </section>
+        <section className="experiences">
+          <MainViewContent name={'Experiences'}>
+            {Experiences.map((ex) => (
+              <div className="experience">
+                <span className="experience__date">
+                  {ex.fromDate}～{ex.toDate}
+                </span>
+                <br />
+                {ex.text}
+              </div>
+            ))}
           </MainViewContent>
-        </div>
-        <div>
+        </section>
+        <section className="life">
+          <MainViewContent name={'Life & Events'}>{Life}</MainViewContent>
+        </section>
+        <section>
+          <MainViewContent name="PCs">
+            <div className="devices">{devices} </div>
+          </MainViewContent>
+        </section>
+        <section>
           <MainViewContent name={'Contact'}>
-            <a href="mailto:mail@kichi2004.jp" className="contact-mail">
+            <a href="mailto:mail@kichi2004.jp" className="contact-email">
               <img
                 src={require('../assets/mail.png')}
                 alt="mail"
-                className="contact-mail__icon"
+                className="contact-email__icon"
               />
-              <div className="contact-mail__address">mail@kichi2004.jp</div>
+              <div className="contact-email__address">mail@kichi2004.jp</div>
             </a>
             <a
               href="https://twitter.com/messages/compose?recipient_id=&ref_src=twsrc%5Etfw"
@@ -86,7 +107,7 @@ export default class MainView extends React.Component {
               </div>
             </a>
           </MainViewContent>
-        </div>
+        </section>
       </div>
     )
   }

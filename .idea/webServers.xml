@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="1a2a4cea-2b98-4d9d-99af-9cf17701c22c" name="conoha" url="https://kichi2004.jp">
+        <fileTransfer accessType="SFTP" host="118.27.36.208" port="50428" sshConfigId="0e99e00c-ffb6-4936-a6ee-ef6ce7b8187a" sshConfig="ConoHa VPS" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

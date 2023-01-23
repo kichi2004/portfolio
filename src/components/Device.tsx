@@ -1,9 +1,9 @@
 import React from 'react'
-import './Devise.scss'
+import './Device.scss'
 import { DeviceType } from '../assets/items'
-interface DeviseProps extends DeviceType {}
+interface DeviceProps extends DeviceType {}
 
-export default class Devise extends React.Component<DeviseProps> {
+export default class Device extends React.Component<DeviceProps> {
   render() {
     const name = this.props.name
     const contents: JSX.Element[] = []
