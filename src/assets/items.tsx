@@ -49,13 +49,7 @@ export const ProfileItems: ProfileType[] = [
   {
     key: 'work',
     title: 'Work',
-    content: (
-      <div>
-        JX PRESS Corporation / JX通信社
-        <br />
-        <span className="small">Development Partner</span>
-      </div>
-    )
+    content: <div>Freelance Programmer</div>
   },
   {
     key: 'lives',
@@ -91,7 +85,7 @@ export const SkillItems: SkillType[] = [
     directory: 'csharp',
     since: '2017/01～',
     comment:
-      '［実務経験あり］競技プログラミングや，Windows Forms アプリ / Twitter BOT 開発，業務でのバッチ作成など，幅広い分野で利用しています。',
+      '［実務経験あり］競技プログラミングや，Windows Forms アプリ / X (Twitter) BOT 開発，業務でのバッチ作成など，幅広い分野で利用しています。',
     frameworks: [
       {
         name: '.NET / .NET Core'
@@ -233,6 +227,22 @@ export const Life = (
     </div>
     <h4 className="life__year">2023</h4>
     <div className="life-content__wrap">
+      <div className="life-content__date">2023/10</div>
+      <div className="life-content">
+        <p>ICPC 2023 日本予選に参加．</p>
+      </div>
+    </div>
+    <div className="life-content__wrap">
+      <div className="life-content__date">2023/09</div>
+      <div className="life-content">
+        <p>
+          TPC (Tsukuba Programming Circle) にて，プログラミングコンテスト{' '}
+          <a href="https://connpass.com/event/288504/">ITF.PC 2023</a> を主催．
+          オンサイト（オフライン会場：筑波大学）には約30名が参加．
+        </p>
+      </div>
+    </div>
+    <div className="life-content__wrap">
       <div className="life-content__date">2023/01</div>
       <div className="life-content">
         <p>
@@ -347,13 +357,23 @@ export const Experiences: ExperienceType[] = [
   },
   {
     fromDate: '2020/07',
+    toDate: '2023/01',
     text: '(株) JX通信社にてインターンシップおよび業務委託による開発'
+  },
+  {
+    fromDate: '2023/02',
+    toDate: '2023/10',
+    text: '(株) コードタクトにて業務委託による開発'
+  },
+  {
+    fromDate: '2023/12',
+    text: '業務委託開発（予定）'
   }
 ]
 
 export type DeviceType = {
   name: string
-  spec: { [key: string]: string | JSX.Element }
+  spec: { [key: string]: string | React.ReactElement }
 }
 
 export const Devices: DeviceType[] = [
@@ -367,21 +387,21 @@ export const Devices: DeviceType[] = [
     }
   },
   {
+    name: 'MacBook Pro (14-inch, 2023)',
+    spec: {
+      CPU: 'Apple M3 Pro (11-cores)',
+      RAM: '18GB',
+      SSD: '512GB',
+      GPU: 'Apple M3 Pro (14-cores)'
+    }
+  },
+  {
     name: 'Prestige 14',
     spec: {
       CPU: 'Intel Core i7-1195G7',
       RAM: '32GB',
       SSD: '1TB',
       GPU: 'GeForce GTX 1650 Ti Max-Q'
-    }
-  },
-  {
-    name: 'MacBook Air 2020',
-    spec: {
-      CPU: 'Intel Core i7-1060NG7',
-      RAM: '16GB',
-      SSD: '256GB',
-      GPU: 'Intel Iris Plus Graphics'
     }
   }
 ]

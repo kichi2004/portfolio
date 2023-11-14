@@ -96,10 +96,12 @@ export default class MainView extends React.Component {
             <a
               href="https://twitter.com/messages/compose?recipient_id=&ref_src=twsrc%5Etfw"
               className="contact-twitter"
+              target="_blank"
+              rel="noreferrer"
             >
               <img
                 src={require('../assets/twitter.png')}
-                alt="twitter"
+                alt="X (Twitter)"
                 className="contact-twitter__icon"
               />
               <div className="contact-twitter__address">
