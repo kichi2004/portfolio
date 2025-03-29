@@ -9,7 +9,7 @@ const App: React.FC = () => {
         <div className="elements">
           <img
             className="elements__icon"
-            src={require('./assets/icon.png')}
+            src="/icon.png"
             alt="ICON"
           />
           <span className="elements__name">kichi2004</span>
@@ -24,7 +24,7 @@ const App: React.FC = () => {
       <div className="footer">
         (c) kichi2004 2023
         <br />
-        Last Update: 2023/11/14
+        Last Update: 2025/03/30
       </div>
     </div>
   )
