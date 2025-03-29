@@ -11,6 +11,8 @@ import {
 } from '../assets/items'
 import SkillBox from './SkillBox'
 import Device from './Device'
+import MailIcon from '../assets/mail.png'
+import XIcon from '../assets/twitter.png'
 
 export default class MainView extends React.Component {
   render() {
@@ -40,7 +42,7 @@ export default class MainView extends React.Component {
       <div className="other-skill" key={x.name}>
         <img
           className="other-skill__image"
-          src={require(`../assets/langs/other/${x.imagePath}`)}
+          src={`/langs/other/${x.imagePath}`}
           alt={x.name}
         />
         <div className="other-skill__text">{x.name}</div>
@@ -64,8 +66,8 @@ export default class MainView extends React.Component {
         </section>
         <section className="experiences">
           <MainViewContent name={'Experiences'}>
-            {Experiences.map((ex) => (
-              <div className="experience">
+            {Experiences.map((ex, i) => (
+              <div className="experience" key={`experience-${i}`}>
                 <span className="experience__date">
                   {ex.fromDate}～{ex.toDate}
                 </span>
@@ -86,11 +88,7 @@ export default class MainView extends React.Component {
         <section>
           <MainViewContent name={'Contact'}>
             <a href="mailto:mail@kichi2004.jp" className="contact-email">
-              <img
-                src={require('../assets/mail.png')}
-                alt="mail"
-                className="contact-email__icon"
-              />
+              <img src={MailIcon} alt="mail" className="contact-email__icon" />
               <div className="contact-email__address">mail@kichi2004.jp</div>
             </a>
             <a
@@ -100,7 +98,7 @@ export default class MainView extends React.Component {
               rel="noreferrer"
             >
               <img
-                src={require('../assets/twitter.png')}
+                src={XIcon}
                 alt="X (Twitter)"
                 className="contact-twitter__icon"
               />

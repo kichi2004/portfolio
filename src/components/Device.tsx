@@ -1,7 +1,7 @@
 import React from 'react'
 import './Device.scss'
 import { DeviceType } from '../assets/items'
-interface DeviceProps extends DeviceType {}
+type DeviceProps = DeviceType
 
 export default class Device extends React.Component<DeviceProps> {
   render() {

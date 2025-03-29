@@ -2,18 +2,18 @@ import React from 'react'
 import { SkillType } from '../assets/items'
 import './SkillBox.scss'
 
-interface SkillBoxProps extends SkillType {}
+type SkillBoxProps = SkillType
 
 export default class SkillBox extends React.Component<SkillBoxProps> {
   render() {
-    const langImage: any = require(`../assets/langs/${this.props.directory}/index.png`)
+    const langImage = `/langs/${this.props.directory}/index.png`
     const frameworks = (this.props.frameworks || []).map((framework) => (
       <div className="framework-item" key={framework.name}>
         {framework.imagePath && (
           <img
             className="framework-item__image"
             alt={framework.name}
-            src={require(`../assets/langs/${this.props.directory}/${framework.imagePath}`)}
+            src={`/langs/${this.props.directory}/${framework.imagePath}`}
           />
         )}
         <div className="framework-item__text">{framework.name}</div>
