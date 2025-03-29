@@ -7,11 +7,7 @@ const App: React.FC = () => {
     <div className="wrapper">
       <div className="top">
         <div className="elements">
-          <img
-            className="elements__icon"
-            src="/icon.png"
-            alt="ICON"
-          />
+          <img className="elements__icon" src="/icon.png" alt="ICON" />
           <span className="elements__name">kichi2004</span>
         </div>
         <div className="top__sp">
@@ -22,7 +18,7 @@ const App: React.FC = () => {
       </div>
       <MainView />
       <div className="footer">
-        (c) kichi2004 2023
+        (c) kichi2004 2025
         <br />
         Last Update: 2025/03/30
       </div>

@@ -66,8 +66,8 @@ export default class MainView extends React.Component {
         </section>
         <section className="experiences">
           <MainViewContent name={'Experiences'}>
-            {Experiences.map((ex) => (
-              <div className="experience">
+            {Experiences.map((ex, i) => (
+              <div className="experience" key={`experience-${i}`}>
                 <span className="experience__date">
                   {ex.fromDate}～{ex.toDate}
                 </span>
@@ -88,11 +88,7 @@ export default class MainView extends React.Component {
         <section>
           <MainViewContent name={'Contact'}>
             <a href="mailto:mail@kichi2004.jp" className="contact-email">
-              <img
-                src={MailIcon}
-                alt="mail"
-                className="contact-email__icon"
-              />
+              <img src={MailIcon} alt="mail" className="contact-email__icon" />
               <div className="contact-email__address">mail@kichi2004.jp</div>
             </a>
             <a
