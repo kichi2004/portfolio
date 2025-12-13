@@ -6,9 +6,7 @@
     "plugin:react-hooks/recommended",
     "prettier"
   ],
-  "plugins": [
-    "prettier"
-  ],
+  "plugins": ["prettier"],
   "rules": {
     "prettier/prettier": [
       "error",

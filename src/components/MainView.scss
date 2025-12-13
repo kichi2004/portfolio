@@ -6,7 +6,6 @@
   margin: auto;
 }
 
-
 .profile {
   .row {
     display: grid;
@@ -112,7 +111,7 @@
   font-size: 24px;
   line-height: 1.4;
   padding-bottom: 16px;
-  
+
   a {
     color: inherit;
   }
@@ -132,7 +131,6 @@
     padding: 8px 16px 8px 32px;
     margin-bottom: 12px;
   }
-
 
   .life-content {
     &__wrap {
@@ -162,8 +160,7 @@
       padding-left: 110px;
       color: black;
 
-
-      @media screen and (max-width: 768px)  {
+      @media screen and (max-width: 768px) {
         padding-left: 0;
         padding-top: 1.8em;
       }

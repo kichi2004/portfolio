@@ -8,21 +8,21 @@
   border-radius: 2rem;
   grid-template-rows: min-content auto 2rem;
   grid-template-columns: 150px 14rem 1fr;
-  grid-template-areas: "lang-image lang-name comment   " "lang-image lang-name frameworks" "lang-image since     frameworks";
+  grid-template-areas: 'lang-image lang-name comment   ' 'lang-image lang-name frameworks' 'lang-image since     frameworks';
   @media screen and (max-width: 768px) {
     grid-template-rows: 1fr 2rem auto min-content;
     grid-template-columns: 150px 1fr;
     grid-template-areas:
-            "lang-image lang-name"
-            "lang-image since"
-            "comment    comment"
-            "frameworks frameworks";
+      'lang-image lang-name'
+      'lang-image since'
+      'comment    comment'
+      'frameworks frameworks';
   }
 
   @media screen and (max-width: 512px) {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto 0 auto;
-    grid-template-areas: "lang-image" "lang-name" "since" "comment" "frameworks";
+    grid-template-areas: 'lang-image' 'lang-name' 'since' 'comment' 'frameworks';
   }
 
   &__lang-image {

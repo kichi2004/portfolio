@@ -1,7 +1,7 @@
 .wrapper {
   width: 100%;
   height: 100%;
-  background-color: #15151C;
+  background-color: #15151c;
 }
 
 .top {
@@ -11,8 +11,8 @@
   width: 100%;
   height: 100vh;
   align-items: center;
-  background-color: #25252C;
-  color: #DDDDD7;
+  background-color: #25252c;
+  color: #ddddd7;
 
   &__sp {
     @media screen and (min-width: 513px) {
@@ -43,15 +43,14 @@
 }
 
 .footer {
-  background-color: #25252C;
-  color: #DDDDD7;
+  background-color: #25252c;
+  color: #ddddd7;
   text-align: center;
   padding: 3em 0;
 }
 
-
 .triangle {
-  $border_style: 3px #DDDDD7 solid;
+  $border_style: 3px #ddddd7 solid;
   margin-top: 10rem;
   height: 70px;
   width: 70px;
