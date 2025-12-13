@@ -240,6 +240,31 @@ const lifeData: LifeType = [
     year: 2025,
     contents: [
       {
+        month: '2025/12',
+        content: <p>筑波大学{' '}
+          <a href="https://www.softlab.cs.tsukuba.ac.jp/" target="_blank" rel="noreferrer">
+            ソフトウェア研究室 (Softlab)
+          </a>
+          {' '}に（仮）配属。</p>,
+        key: 'join-softlab'
+      },
+      {
+        month: '2025/11',
+        content: (
+          <p>
+            Tsukuba Programming Circle にて、プログラミングコンテスト{' '}
+            <a href="https://tpc.connpass.com/event/369467/">ITF.PC 2025</a>{' '}
+            を主催。 オンサイト（オフライン会場：筑波大学 東京キャンパス）には約20名が参加。
+          </p>
+        ),
+        key: 'itfpc2025'
+      },
+      {
+        month: '2025/09',
+        content: <p>約 5 週間の夏季インターンシップにバックエンドエンジニアとして参加。</p>,
+        key: 'internship-2025-summer',
+      },
+      {
         month: '2025/04',
         content: <p>筑波大学に復学。</p>,
         key: 'back-to-univ'
